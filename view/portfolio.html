@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio detalhado de projetos desenvolvidos com HTML, CSS e JavaScript." />
+  <title>Portfólio — Projetos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/portfolio.css" />
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════
+       VLIBRAS — Acessibilidade em Libras
+  ════════════════════════════════════ -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Voltar à página inicial">
+        Maria da Silva
+      </a>
+      <button
+        id="menu-toggle"
+        class="menu-toggle"
+        aria-controls="nav-menu"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+        type="button"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Menu principal">
+        <ul role="list">
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="index.html#projetos">Projetos</a></li>
+          <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Breadcrumb de navegação acessível -->
+    <nav aria-label="Navegação estrutural" class="breadcrumb-nav">
+      <div class="container">
+        <ol class="breadcrumb" role="list">
+          <li><a href="index.html">Início</a></li>
+          <li aria-current="page">Portfólio</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Cabeçalho da página -->
+    <section class="section portfolio-hero" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <h1 id="portfolio-heading" class="section-title">
+          <span class="section-number" aria-hidden="true">Portfolio</span>
+          Todos os Projetos
+        </h1>
+        <p class="section-subtitle">Projetos desenvolvidos com foco em boas práticas, acessibilidade e responsividade.</p>
+
+        <!-- Filtro por categoria (acessível com role=group) -->
+        <div class="filter-group" role="group" aria-label="Filtrar projetos por tipo">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="filter-btn" data-filter="landing" aria-pressed="false">Landing Pages</button>
+          <button class="filter-btn" data-filter="portfolio" aria-pressed="false">Portfólios</button>
+          <button class="filter-btn" data-filter="institucional" aria-pressed="false">Institucionais</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid de projetos -->
+    <section class="section section-pt-0" aria-labelledby="projects-list-heading">
+      <h2 id="projects-list-heading" class="sr-only">Lista de projetos</h2>
+      <div class="container">
+        <div id="portfolio-grid" class="portfolio-grid" role="list" aria-label="Projetos">
+
+          <!-- Projeto 1 -->
+          <article class="portfolio-card reveal" role="listitem" data-category="landing" aria-labelledby="proj1-title">
+            <div class="card-badge">Landing Page</div>
+            <div class="card-icon" aria-hidden="true">🚀</div>
+            <h3 id="proj1-title" class="card-title">Landing Page — Produto SaaS</h3>
+            <p class="card-description">
+              Página de conversão para produto de software com CTA destacado, seção de
+              benefícios e planos de preço. Estrutura mobile-first com menu responsivo.
+            </p>
+            <ul class="project-tags" aria-label="Tecnologias">
+              <li class="project-tag">HTML5</li>
+              <li class="project-tag">CSS3</li>
+              <li class="project-tag">JavaScript</li>
+              <li class="project-tag">Flexbox</li>
+            </ul>
+            <a href="#" class="card-link" aria-label="Ver detalhes: Landing Page SaaS">
+              Ver projeto <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Projeto 2 -->
+          <article class="portfolio-card reveal" role="listitem" data-category="landing" aria-labelledby="proj2-title">
+            <div class="card-badge">Landing Page</div>
+            <div class="card-icon" aria-hidden="true">📚</div>
+            <h3 id="proj2-title" class="card-title">Landing Page — Curso Online</h3>
+            <p class="card-description">
+              Divulgação de curso com depoimentos, cronograma e formulário de inscrição.
+              Foco em conversão com hierarquia visual clara e CTA acima da dobra.
+            </p>
+            <ul class="project-tags" aria-label="Tecnologias">
+              <li class="project-tag">HTML5</li>
+              <li class="project-tag">CSS Grid</li>
+              <li class="project-tag">Formulário</li>
+            </ul>
+            <a href="#" class="card-link" aria-label="Ver detalhes: Landing Page Curso">
+              Ver projeto <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Projeto 3 -->
+          <article class="portfolio-card reveal" role="listitem" data-category="institucional" aria-labelledby="proj3-title">
+            <div class="card-badge">Institucional</div>
+            <div class="card-icon" aria-hidden="true">🏢</div>
+            <h3 id="proj3-title" class="card-title">Página Institucional</h3>
+            <p class="card-description">
+              Site corporativo com seções de Sobre, Serviços, Equipe e Contato.
+              HTML semântico rigoroso e navegação acessível via teclado.
+            </p>
+            <ul class="project-tags" aria-label="Tecnologias">
+              <li class="project-tag">HTML Semântico</li>
+              <li class="project-tag">WCAG AA</li>
+              <li class="project-tag">ARIA</li>
+            </ul>
+            <a href="#" class="card-link" aria-label="Ver detalhes: Página Institucional">
+              Ver projeto <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Projeto 4 -->
+          <article class="portfolio-card reveal" role="listitem" data-category="portfolio" aria-labelledby="proj4-title">
+            <div class="card-badge">Portfólio</div>
+            <div class="card-icon" aria-hidden="true">👩‍💻</div>
+            <h3 id="proj4-title" class="card-title">Portfólio de Desenvolvedora</h3>
+            <p class="card-description">
+              Apresentação profissional com seções de perfil, projetos e contato.
+              Layout responsivo com grid e dark mode nativo.
+            </p>
+            <ul class="project-tags" aria-label="Tecnologias">
+              <li class="project-tag">CSS Grid</li>
+              <li class="project-tag">Media Queries</li>
+              <li class="project-tag">MVC</li>
+            </ul>
+            <a href="#" class="card-link" aria-label="Ver detalhes: Portfólio Desenvolvedora">
+              Ver projeto <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Projeto 5 -->
+          <article class="portfolio-card reveal" role="listitem" data-category="portfolio" aria-labelledby="proj5-title">
+            <div class="card-badge">Portfólio</div>
+            <div class="card-icon" aria-hidden="true">🎨</div>
+            <h3 id="proj5-title" class="card-title">Portfólio de Designer</h3>
+            <p class="card-description">
+              Galeria visual com filtro de categoria, lightbox acessível e layout
+              masonry em CSS. Navegação completa via teclado e leitores de tela.
+            </p>
+            <ul class="project-tags" aria-label="Tecnologias">
+              <li class="project-tag">CSS Grid</li>
+              <li class="project-tag">JavaScript</li>
+              <li class="project-tag">ARIA</li>
+            </ul>
+            <a href="#" class="card-link" aria-label="Ver detalhes: Portfólio Designer">
+              Ver projeto <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Projeto 6 -->
+          <article class="portfolio-card reveal" role="listitem" data-category="portfolio" aria-labelledby="proj6-title">
+            <div class="card-badge">Portfólio</div>
+            <div class="card-icon" aria-hidden="true">💼</div>
+            <h3 id="proj6-title" class="card-title">Portfólio de Freelancer</h3>
+            <p class="card-description">
+              Portfólio multidisciplinar com painel de serviços, lista de clientes e
+              formulário de orçamento. Layout assimétrico e responsivo.
+            </p>
+            <ul class="project-tags" aria-label="Tecnologias">
+              <li class="project-tag">Flexbox</li>
+              <li class="project-tag">Media Queries</li>
+              <li class="project-tag">Formulário</li>
+            </ul>
+            <a href="#" class="card-link" aria-label="Ver detalhes: Portfólio Freelancer">
+              Ver projeto <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- Mensagem quando filtro não encontra resultados -->
+        <p id="no-results" class="no-results" hidden role="status" aria-live="polite">
+          Nenhum projeto encontrado nesta categoria.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© 2025 Maria da Silva. Desenvolvido com HTML, CSS e JavaScript.</p>
+      <p class="footer-note">Arquitetura MVC · Responsivo · Acessível (WCAG AA)</p>
+    </div>
+  </footer>
+
+  <script src="../model/data.js"></script>
+  <script src="../controller/controller.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/portfolio.js"></script>
+
+  <!-- VLibras -->
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>
