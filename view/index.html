@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio pessoal de desenvolvedora web front-end. Projetos, habilidades e contato." />
+  <title>Portfólio</title>
+
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Skip link para acessibilidade — pula direto para o conteúdo principal -->
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════
+       VLIBRAS — Acessibilidade em Libras
+  ════════════════════════════════════ -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════
+       SKIP NAVIGATION (acessibilidade)
+  ════════════════════════════════════ -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- ════════════════════════════════════
+       HEADER / NAV
+  ════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+
+      <a href="#hero" class="logo" aria-label="Início — voltar ao topo">
+        <span id="nav-name" aria-hidden="true">…</span>
+      </a>
+
+      <!-- Botão hambúrguer (mobile) -->
+      <button
+        id="menu-toggle"
+        class="menu-toggle"
+        aria-controls="nav-menu"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+        type="button"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Navegação principal -->
+      <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Menu principal">
+        <ul role="list">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO / SOBRE ─────────────────── -->
+    <section id="hero" class="section section-hero" aria-labelledby="hero-heading">
+      <div class="container hero-layout">
+
+        <!-- Avatar -->
+        <div class="avatar-wrap" aria-hidden="true">
+          <div class="avatar">
+            <span id="profile-initials"></span>
+          </div>
+          <div class="avatar-ring"></div>
+        </div>
+
+        <!-- Texto do perfil -->
+        <div class="hero-text">
+          <p class="hero-label">Olá, eu sou Tiago Antunes</p>
+          <h1 id="hero-heading" id="profile-name">…</h1>
+          <p class="hero-role"><span id="profile-role">…</span></p>
+          <p class="hero-bio" id="profile-bio">…</p>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+            <a href="#contato" class="btn btn-outline">Entrar em Contato</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── HABILIDADES ───────────────────── -->
+    <section id="sobre" class="section section-skills reveal" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading" class="section-title">
+          <span class="section-number" aria-hidden="true">01</span>
+          Habilidades
+        </h2>
+        <ul id="skills-list" class="skills-list" aria-label="Lista de habilidades técnicas">
+          <!-- Populado pelo Controller -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── PROJETOS ──────────────────────── -->
+    <section id="projetos" class="section section-projects reveal" aria-labelledby="projects-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="projects-heading" class="section-title">
+            <span class="section-number" aria-hidden="true">02</span>
+            Projetos
+          </h2>
+          <p class="section-subtitle">Trabalhos desenvolvidos com foco em semântica, responsividade e acessibilidade.</p>
+        </header>
+
+        <div id="projects-grid" class="projects-grid" role="list" aria-label="Lista de projetos">
+          <!-- Populado pelo Controller via Model -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTATO ───────────────────────── -->
+    <section id="contato" class="section section-contact reveal" aria-labelledby="contact-heading">
+      <div class="container contact-layout">
+
+        <!-- Informações de contato -->
+        <div class="contact-info">
+          <h2 id="contact-heading" class="section-title">
+            <span class="section-number" aria-hidden="true">03</span>
+            Contato
+          </h2>
+          <p class="contact-intro">Vamos trabalhar juntos? Entre em contato!</p>
+
+          <address class="contact-details">
+            <dl>
+              <div class="contact-item">
+                <dt><span aria-hidden="true">📧</span> E-mail</dt>
+                <dd>
+                  <a id="contact-email" href="mailto:tiagoantunes1974@gmail.com" aria-label="Enviar e-mail">…</a>
+                </dd>
+              </div>
+              <div class="contact-item">
+                <dt><span aria-hidden="true">📍</span> Localização</dt>
+                <dd id="contact-location">Bairro Campestre - Santo Andre (SP)</dd>
+              </div>
+              <div class="contact-item">
+                <dt><span aria-hidden="true">🔗</span> GitHub</dt>
+                <dd><a id="contact-github" href="#" target="_blank" rel="noopener noreferrer" aria-label="Perfil no GitHub (abre em nova aba)">https://github.com/TiagoAntunes-Dev/TiagoAntunes-Dev</a></dd>
+              </div>
+              <div class="contact-item">
+                <dt><span aria-hidden="true">💼</span> LinkedIn</dt>
+                <dd><a id="contact-linkedin" href="#" target="_blank" rel="noopener noreferrer" aria-label="Perfil no LinkedIn (abre em nova aba)">https://www.linkedin.com/in/tiago-antunes-paz-de-oliveira-174687254/</a></dd>
+              </div>
+            </dl>
+          </address>
+        </div>
+
+        <!-- Formulário de contato -->
+        <div class="contact-form-wrap">
+          <form id="contact-form" class="contact-form" novalidate aria-label="Formulário de contato">
+
+            <!-- Status de envio (acessível com role=status) -->
+            <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
+
+            <div class="form-group">
+              <label for="field-name">Nome <span aria-hidden="true">*</span><span class="sr-only">(obrigatório)</span></label>
+              <input
+                type="text"
+                id="field-name"
+                name="name"
+                autocomplete="name"
+                required
+                placeholder="Seu nome completo"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="field-email">E-mail <span aria-hidden="true">*</span><span class="sr-only">(obrigatório)</span></label>
+              <input
+                type="email"
+                id="field-email"
+                name="email"
+                autocomplete="email"
+                required
+                placeholder="seu@email.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="field-message">Mensagem <span aria-hidden="true">*</span><span class="sr-only">(obrigatório)</span></label>
+              <textarea
+                id="field-message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Descreva seu projeto ou dúvida…"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Enviar Mensagem
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© 2025 <span id="footer-name"></span>. Desenvolvido com HTML, CSS e JavaScript.</p>
+      <p class="footer-note">Arquitetura MVC · Responsivo · Acessível (WCAG AA)</p>
+    </div>
+  </footer>
+
+  <!-- Scripts (Model → Controller → App) -->
+  <script src="../model/data.js"></script>
+  <script src="../controller/controller.js"></script>
+  <script src="../js/app.js"></script>
+
+  <!-- VLibras -->
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>
